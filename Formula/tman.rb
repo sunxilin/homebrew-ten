@@ -35,12 +35,8 @@ class Tman < Formula
   end
 
   def install
-    # The binary is in the zip file at ten_manager/bin/tman
-    # Move it to the Homebrew bin directory
-    # We need to change directory context first
-    cd "ten_manager" do
-      bin.install "bin/tman"
-    end
+    # The binary is directly accessible after unzip
+    bin.install "bin/tman"
   end
 
   def caveats
