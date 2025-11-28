@@ -17,26 +17,20 @@ class Tman < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/TEN-framework/ten-framework/releases/download/#{version}/tman-mac-release-x64.zip"
-      # TODO: Update this SHA256 with the actual checksum of your release file
-      # Run: shasum -a 256 tman-mac-release-x64.zip
-      sha256 "REPLACE_WITH_ACTUAL_SHA256_FOR_INTEL_MAC"
+      sha256 "e895f217c47ccc0999485d76a5ac8caa0a67350f9e0544f72ddd3ee89aea51bf"
     elsif Hardware::CPU.arm?
       url "https://github.com/TEN-framework/ten-framework/releases/download/#{version}/tman-mac-release-arm64.zip"
-      # TODO: Update this SHA256 with the actual checksum of your release file
-      # Run: shasum -a 256 tman-mac-release-arm64.zip
-      sha256 "REPLACE_WITH_ACTUAL_SHA256_FOR_ARM64_MAC"
+      sha256 "ba163ab1fe56827ed36b3e8b2deeafbe741fc56101b65f5ef6c8a7936709af9c"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/TEN-framework/ten-framework/releases/download/#{version}/tman-linux-release-x64.zip"
-      # TODO: Update this SHA256 with the actual checksum
-      sha256 "REPLACE_WITH_ACTUAL_SHA256_FOR_LINUX_X64"
+      sha256 "fa8220a7f474ef3a5b3afcf1f23ca1ecf1fc11cdbe223e02febdacc0c184fc20"
     elsif Hardware::CPU.arm?
       url "https://github.com/TEN-framework/ten-framework/releases/download/#{version}/tman-linux-release-arm64.zip"
-      # TODO: Update this SHA256 with the actual checksum
-      sha256 "REPLACE_WITH_ACTUAL_SHA256_FOR_LINUX_ARM64"
+      sha256 "799392b4f2c6226206d22cacea926cda98da9925e015f170aecf9633cf82304b"
     end
   end
 
