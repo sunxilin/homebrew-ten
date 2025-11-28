@@ -19,12 +19,12 @@ class Tman < Formula
       url "https://github.com/TEN-framework/ten-framework/releases/download/#{version}/tman-mac-release-x64.zip"
       # TODO: Update this SHA256 with the actual checksum of your release file
       # Run: shasum -a 256 tman-mac-release-x64.zip
-      sha256 "e895f217c47ccc0999485d76a5ac8caa0a67350f9e0544f72ddd3ee89aea51bf"
+      sha256 "REPLACE_WITH_ACTUAL_SHA256_FOR_INTEL_MAC"
     elsif Hardware::CPU.arm?
       url "https://github.com/TEN-framework/ten-framework/releases/download/#{version}/tman-mac-release-arm64.zip"
       # TODO: Update this SHA256 with the actual checksum of your release file
       # Run: shasum -a 256 tman-mac-release-arm64.zip
-      sha256 "ba163ab1fe56827ed36b3e8b2deeafbe741fc56101b65f5ef6c8a7936709af9c"
+      sha256 "REPLACE_WITH_ACTUAL_SHA256_FOR_ARM64_MAC"
     end
   end
 
@@ -32,11 +32,11 @@ class Tman < Formula
     if Hardware::CPU.intel?
       url "https://github.com/TEN-framework/ten-framework/releases/download/#{version}/tman-linux-release-x64.zip"
       # TODO: Update this SHA256 with the actual checksum
-      sha256 "fa8220a7f474ef3a5b3afcf1f23ca1ecf1fc11cdbe223e02febdacc0c184fc20"
+      sha256 "REPLACE_WITH_ACTUAL_SHA256_FOR_LINUX_X64"
     elsif Hardware::CPU.arm?
       url "https://github.com/TEN-framework/ten-framework/releases/download/#{version}/tman-linux-release-arm64.zip"
       # TODO: Update this SHA256 with the actual checksum
-      sha256 "799392b4f2c6226206d22cacea926cda98da9925e015f170aecf9633cf82304b"
+      sha256 "REPLACE_WITH_ACTUAL_SHA256_FOR_LINUX_ARM64"
     end
   end
 
@@ -44,11 +44,6 @@ class Tman < Formula
     # The binary is in the zip file at ten_manager/bin/tman
     # Move it to the Homebrew bin directory
     bin.install "ten_manager/bin/tman"
-  end
-
-  test do
-    # Test that tman can be executed and returns version info
-    assert_match version.to_s, shell_output("#{bin}/tman --version")
   end
 
   def caveats
@@ -64,5 +59,10 @@ class Tman < Formula
       For more information, visit:
         https://github.com/TEN-framework/ten-framework
     EOS
+  end
+
+  test do
+    # Test that tman can be executed and returns version info
+    assert_match version.to_s, shell_output("#{bin}/tman --version")
   end
 end
